@@ -1,0 +1,22 @@
+server:
+  port: 8000
+apollo:
+  bootstrap:
+    enabled: true
+app:
+  id: 1001
+
+spring:
+  profiles:
+    active: DEV
+  application:
+    name: spring-boot-admin
+---
+spring:
+  profiles: DEV
+
+apollo:
+  meta: http://localhost:8080
+---
+spring:
+  profiles: test

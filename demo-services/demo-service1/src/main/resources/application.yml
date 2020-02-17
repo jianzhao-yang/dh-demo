@@ -1,0 +1,28 @@
+server:
+  port: 8899
+  servlet:
+    context-path: /demo-service1
+apollo:
+  bootstrap:
+    enabled: true
+app:
+  id: 1001
+
+ribbon:
+  eureka:
+    enabled: true
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: demo-service1
+---
+spring:
+  profiles: dev
+
+apollo:
+  meta: http://localhost:8080
+---
+spring:
+  profiles: test

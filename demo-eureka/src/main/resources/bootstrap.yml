@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: registry-eureka
+  cloud:
+    inetutils: ## 网卡设置
+      ignoredInterfaces:  ## 忽略的网卡
+        - docker0
+        - veth.*
+        - VM.*
+      preferredNetworks:  ## 优先的网段
+        - 127.0.0.1
+        - 192.168
+
